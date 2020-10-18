@@ -23,28 +23,42 @@ Compromised test scores:
 - Thomas High School, 9th Grade Reading and Math scores
 ### Audited results with compromised results removed:
 - Math and Reading Performance by School Type (District or Charter School)
+#
 ![Math and Reading Performance by School Type](https://github.com/zborglin/School_District_Analysis/blob/main/Resources/district_cleanfix.png)
+#
   Removal of the 9th grade THS math and reading scores has no significant impact on the district level analysis shown above. The impact is within the precision required for this report. The unrounded summary below shows this minimal impact:
   TODO: Add images of unformatted 
   precision will be considered
 - Math and Reading Performance by School
+#
 ![Math and Reading Performance by School](https://github.com/zborglin/School_District_Analysis/blob/main/Resources/school_summary_cleanfix_unformatted.png)
+#
   A small impact to the test performance summary of Thomas High School occured due to the compromised 9th grade scores. Removal of all 9th grade scores led to a a 0.1% decrease in the average reading and math scores:
+  #
 ![Highlight Impact of Score Removal](https://github.com/zborglin/School_District_Analysis/blob/main/Resources/school_THS_highlight.png)
+#
 - How is THS relative performance effected?
   Removal of the 9th grade scores improved THS overall passing % and moved the score from 4th in overall rankings to 2nd.
+  #
   ![Top 5 Schools Before Data Removal](https://github.com/zborglin/School_District_Analysis/blob/main/Resources/Top5_bad.png)
   ![Top 5 Schools After Data Removal](https://github.com/zborglin/School_District_Analysis/blob/main/Resources/Top5_cleanfix.png)
+  #
 - Impact of data removal on THS metrics:
   - Math and reading score by grade:
+  #
   ![Math and reading score by grade](https://github.com/zborglin/School_District_Analysis/blob/main/Resources/grade_cleanfix.png)
+  #
   Removal of the ninth grade scores can be seen in the socre summary by grade table above
   - Math and reading score by spending:
+  #
   ![Math and reading score by spending](https://github.com/zborglin/School_District_Analysis/blob/main/Resources/spending_cleanfix.png)
+  #
   Removal of the corrupted data did not significantly impact the school analysis by spending
   - Math and reading score by school size:
   TODO: "Add size_cleanfix"
+  #
   ![Math and reading score by school size](https://github.com/zborglin/School_District_Analysis/blob/main/Resources/size_cleanfix.png)
+  #
   Removal of the corrupted data did not significantly impact the school analysis by size
   - Math and reading score by school type:
   Removal of the corrupted data did not significantly impact the school analysis by school type
