@@ -3,7 +3,7 @@ Python Application
 Comprehensive Statistical Analysis of a DataFrame
 
 ## Project Overview
-The dataset associated with 15 local schools became corrupted when administration officials detected fraudulent behavior from a subset of the DataFrame associated with Thomas High School. 
+The dataset associated with 15 local schools became corrupted when administration officials detected fraudulent behavior from a subset of the DataFrame associated with Thomas High School (THS). 
 
 The contents related to the request: 
 -An audit of school information and test scores
@@ -16,50 +16,42 @@ The contents related to the request:
 
 ## Resources
 - Data Sources: students_complete.csv, schools_complete.csv
-- Software: Python 3.6.1, Visual Studio Code, 1.38.1
+- Software: Python 3.7
 
+## Summary of Audited School Information
+Compromised test scores:
+- Thomas High School, 9th Grade Reading and Math scores
+### Audited results with compromised results removed:
+- Math and Reading Performance by School Type (District or Charter School)
+TODO Add "district_clean_fix"
+  Removal of the 9th grade THS math and reading scores has no significant impact on the district level analysis shown above. The impact is within the precision required for this report. The unrounded summary below shows this minimal impact:
+  TODO: Add images of unformatted 
+  precision will be considered
+- Math and Reading Performance by School
+TODO Add "School_summary_cleanfix_unformatted"
+  A small impact to the test performance summary of Thomas High School occured due to the compromised 9th grade scores. Removal of all 9th grade scores led to a a 0.1% decrease in the average reading and math scores:
+  TODO add "school_THS_highlight"
+- How is THS relative performance effected?
+  Removal of the 9th grade scores improved THS overall passing % and moved the score from 4th in overall rankings to 2nd.
+  TODO: Add "Top5_bad"
+  TODO: Add "Top5_cleanfix"
+- Impact of data removal on THS metrics:
+  - Math and reading score by grade:
+  TODO: Add "grade_cleanfix"
+  Removal of the ninth grade scores can be seen in the socre summary by grade table above
+  - Math and reading score by spending:
+  TODO: Add" spending_cleanfix"
+  Removal of the corrupted data did not significantly impact the school analysis by spending
+  - Math and reading score by school size:
+  TODO: "Add size_cleanfix"
+  Removal of the corrupted data did not significantly impact the school analysis by size
+  - Math and reading score by school type:
+  Removal of the corrupted data did not significantly impact the school analysis by school type
 ## Summary
-The analysis of the election show that:
-- There were "369,711" votes cast in the election.
-- The candidates were:
-  - Charles Casper Stockham
-  - Diana DeGette
-  - Raymon Anthony Doane
-- The candidate results were:
-  - Charles Casper Stockham received "23.0%" of the vote and "38,855" number of votes
-  - Diana DeGette received "73.8%" of the vote and "272,892" number of votes
-  - Raymon Anthony Doane received "3.1%" of the vote and "11,606" number of votes
-- The winner of the election was:
-  - Diana DeGette, who received "73.8%" of the vote and "272,892" number of votes.
-- Here is the txt file output that may be used cross-platform:
-#
-![PyPoll Election Analysis Algorithm: Txt File Output](https://github.com/zborglin/Election_Analysis/blob/main/analysis/election_results_output.png)
-#
+While it is unfortunate that suspected academic dishonesty occurred within the 9th grade math and reading scores at Thomas High School, the impact on the summarized results is minimal:
+1. Analysis of scores by spending, school size, and school type are not impacted at a level that changes the reported values (i.e. changes are within the required level of precision)
+2. The THS average math and reading results changed by 0.1%
 
-## Challenge Overview
-A deeper dive into the voter data reveals differences in county voter turnout rates. This request requires the following additional tasks:
-
-1. Calculate the total number of votes cast in each county
-2. Calculate the voter turnout for each county (%)
-3. Determine which county had the highest voter turnout
-## Challenge Summary
-The analysis of the voting data by county shows that:
--The counties were:
-  -Jefferson
-  -Denver
-  -Arapahoe
- -The county results were:
-  -Jeferson County received 38,855 ballots
-  -Denver County received 306,055 ballots
-  -Arapahoe County received 24,801 ballots
- -The county with the highest voter turnout:
-  -Denver
- ## Election Audit Summary
- This script enables an efficient and precise election analysis that can be configured to securely analyze all election data in the country. There are a few elements to this technology that enable is capability to meet the diverse needs of the different voting districts:
- - Efficiency: the algorithm is built for speed computing and can easily handle large amounts of data
- - Column driven database structure: any election data that is organized with CSV format can be accomodated by this tool. To give an example, the image below shows where in the code you can assign the target columns in the election data file
- #
- ![Configurable Column-Based Analysis](https://github.com/zborglin/Election_Analysis/blob/main/analysis/column_info.png)
- #
- - Complete Information Customization: There are no limits to the types of data and calculations you may implement within the script. If you want to add categorical information to describe additional data factors you may add them to the analysis. For example, you can add information regarding state election information, the congressional voting results, the funding received by each candidate, or the party affiliation. In addition, you may had any calculations to the results in order to provide the analytics that best represent the essential information. For example, you might be interested in supplementing the analysis to include the electoral votes associated with the popular vote or an analysis of the distribution of voting times relative to election day to see if voters turnout earlier in some districts. 
- 
+However, a deeper dive into the data reveals that this minor changes have a big impact in two areas:
+3. There are now no reported 9th grade math and reading scores at THS and it will be important to isolate the incorrect grades so that the whole class isn't adversely effected by this event.
+4. The small changes to THS math and reading scores changes the school's relative ranking from 4th to 2nd place for all schools. While the score change is minimal this change in standing is significant. It is reccommended that the incorrect scores in the 9th grade class of THS be isolated so that the majority of that dataset can be reincluded in order to have a more accurate representation of the relative school rankings.
