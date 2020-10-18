@@ -27,8 +27,10 @@ Compromised test scores:
 ![Math and Reading Performance by School Type](https://github.com/zborglin/School_District_Analysis/blob/main/Resources/district_cleanfix.png)
 #
   Removal of the 9th grade THS math and reading scores has no significant impact on the district level analysis shown above. The impact is within the precision required for this report. The unrounded summary below shows this minimal impact:
-  TODO: Add images of unformatted 
-  precision will be considered
+  #
+  ![Unrounded Math and Reading Performance by District, Corrupt THS Scores Removed](https://github.com/zborglin/School_District_Analysis/blob/main/Resources/district_cleanfix_unformatted.png)
+  ![Unrounded Math and Reading Performance by District, Includes Corrupt THS Scores](https://github.com/zborglin/School_District_Analysis/blob/main/Resources/district_THS_unformatted.png)
+  #
 - Math and Reading Performance by School
 #
 ![Math and Reading Performance by School](https://github.com/zborglin/School_District_Analysis/blob/main/Resources/school_summary_cleanfix_unformatted.png)
